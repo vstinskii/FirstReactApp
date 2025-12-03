@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Alert } from 'react-native';
+import { StyleSheet, Text, View, Alert, Image } from 'react-native';
 
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
@@ -20,6 +20,16 @@ export default function App() {
           remaining essentially unchanged. It was popularised in the 1960s with the release of
           Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
           like Aldus PageMaker including versions of Lorem Ipsum.</Text>
+
+          <Image 
+          source={require("./assets/icon.png")}
+          style={styles.localImg}
+          />
+          <Image 
+          source={{uri: "https://vitalii-stinskii.com/images/photo.png"}}
+          style={styles.uriImg}
+          />
+
         {/* <StatusBar style="auto" /> */}
       </SafeAreaView>
     </SafeAreaProvider>
@@ -47,5 +57,13 @@ const styles = StyleSheet.create({
   clickText: {
     color: "red",
     textDecorationLine: "underline"
+  },
+  localImg: {
+    height: 280,
+    width: 480
+  },
+  uriImg: {
+    height: 200,
+    width: 150
   }
 });
