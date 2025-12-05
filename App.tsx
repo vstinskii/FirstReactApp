@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Alert, Image, Button, TouchableOpacity, Pressable } from 'react-native';
+import { StyleSheet, Text, View, Alert, Image, Button, TouchableOpacity, Pressable, ScrollView } from 'react-native';
 
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
@@ -10,6 +10,12 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
+        <ScrollView
+
+        contentContainerStyle={styles.main_scroll}
+
+        horizontal={false}
+        >
         <Text style={styles.headerText}>Hello World!!</Text>
         <Text style={styles.mainText} >Lorem Ipsum is simply dummy text of the
           <Text
@@ -43,6 +49,7 @@ export default function App() {
           onPress={onButtonPress}
           />
         {/* <StatusBar style="auto" /> */}
+        </ScrollView>
       </SafeAreaView>
     </SafeAreaProvider>
 
@@ -52,7 +59,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "#e3e3e3e3",
     // alignItems: 'center',
     // justifyContent: 'center',
   },
@@ -71,11 +78,17 @@ const styles = StyleSheet.create({
     textDecorationLine: "underline"
   },
   localImg: {
-    height: 150,
-    width: 150
+    height: 300,
+    width: 300
   },
   uriImg: {
-    height: 200,
-    width: 150
+    height: 350,
+    width: 300
+  },
+  main_scroll: {
+    backgroundColor: "#ffffffe3",
+    marginRight: 20,
+    marginLeft: 20,
+    marginTop: 12
   }
 });
