@@ -1,9 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Alert, Image } from 'react-native';
+import { StyleSheet, Text, View, Alert, Image, Button, TouchableOpacity, Pressable } from 'react-native';
 
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
+
+  const onButtonPress = () => Alert.alert("Button pressed")
+
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
@@ -21,15 +24,24 @@ export default function App() {
           Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
           like Aldus PageMaker including versions of Lorem Ipsum.</Text>
 
+          <TouchableOpacity>
           <Image 
           source={require("./assets/icon.png")}
           style={styles.localImg}
           />
+          </TouchableOpacity>
+          
+          <Pressable onPress={onButtonPress}>
           <Image 
           source={{uri: "https://vitalii-stinskii.com/images/photo.png"}}
           style={styles.uriImg}
           />
-
+          </Pressable>
+          
+          <Button 
+          title="Press"
+          onPress={onButtonPress}
+          />
         {/* <StatusBar style="auto" /> */}
       </SafeAreaView>
     </SafeAreaProvider>
@@ -59,8 +71,8 @@ const styles = StyleSheet.create({
     textDecorationLine: "underline"
   },
   localImg: {
-    height: 280,
-    width: 480
+    height: 150,
+    width: 150
   },
   uriImg: {
     height: 200,
