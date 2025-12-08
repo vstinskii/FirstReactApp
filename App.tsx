@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Alert, Image, Button, TouchableOpacity, Pressable, ScrollView } from 'react-native';
+import { StyleSheet, Text, Platform, Alert, Image, Button, TouchableOpacity, Pressable, ScrollView } from 'react-native';
 
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
@@ -17,6 +17,8 @@ export default function App() {
         horizontal={false}
         >
         <Text style={styles.headerText}>Hello World!!</Text>
+        <Text style={styles.headerText}>This is {Platform.OS === "android" ? "Android" : "IOS"} device</Text>
+        
         <Text style={styles.mainText} >Lorem Ipsum is simply dummy text of the
           <Text
             style={styles.clickText}
@@ -86,7 +88,7 @@ const styles = StyleSheet.create({
     width: 300
   },
   main_scroll: {
-    backgroundColor: "#ffffffe3",
+    backgroundColor: Platform.OS === "android" ? "#ffffffe3" : "#fffedce3",
     marginRight: 20,
     marginLeft: 20,
     marginTop: 12
