@@ -1,5 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Platform, Alert, Image, Button, TouchableOpacity, Pressable, ScrollView, ActivityIndicator } from 'react-native';
+import {
+  StyleSheet, Text, View,
+  Platform, Alert, Image, Button,
+  TouchableOpacity, Pressable,
+  ScrollView, ActivityIndicator
+} from 'react-native';
 
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
@@ -56,6 +61,7 @@ export default function App() {
           <ActivityIndicator size={"large"} color={"green"} />
         </ScrollView>
       </SafeAreaView>
+      <View style={styles.view2}></View>
     </SafeAreaProvider>
 
   );
@@ -102,5 +108,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "rgba(251, 243, 156, 1)"
+  },
+  view2: {
+
+    flex: .02,
+    backgroundColor: "green"
   }
 });
