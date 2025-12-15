@@ -1,9 +1,4 @@
-import {
-  StyleSheet, Text, View,
-  Platform, Alert, Image, Button,
-  TouchableOpacity, Pressable,
-  ScrollView, ActivityIndicator
-} from 'react-native'
+import { StyleSheet, Button, ScrollView } from 'react-native'
 import React from 'react'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
@@ -24,6 +19,9 @@ const Menu = () => {
           />
           <Button title="React Flex Wrap"
           onPress={() => navigation.navigate("ReactFlexWrap")}
+          />
+          <Button title="React Dimensions"
+          onPress={() => navigation.navigate("ReactDimensions")}
           />
 
         </ScrollView>
