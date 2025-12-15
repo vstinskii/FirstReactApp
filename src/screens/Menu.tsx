@@ -20,8 +20,8 @@ const Menu = () => {
           <Button title="React Flex Wrap"
           onPress={() => navigation.navigate("ReactFlexWrap")}
           />
-          <Button title="React Dimensions"
-          onPress={() => navigation.navigate("ReactDimensions")}
+          <Button title="React UI Scale"
+          onPress={() => navigation.navigate("ReactUIScale")}
           />
 
         </ScrollView>

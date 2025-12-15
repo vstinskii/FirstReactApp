@@ -3,7 +3,7 @@ import ReactNativeBasics from "../screens/ReactNativeBasics";
 import Menu from "../screens/Menu";
 import ReactFlex from "../screens/ReactFlex";
 import ReactFlexWrap from "../screens/ReactFlexWrap";
-import ReactDimensions from "../screens/ReactDimensions";
+import ReactUIScale from "../screens/ReactUIScale";
 
 const Stack = createStackNavigator()
 
@@ -18,8 +18,8 @@ function MainStackNavigator() {
             component={ReactFlex} />
         <Stack.Screen name="ReactFlexWrap" 
             component={ReactFlexWrap} />
-        <Stack.Screen name="ReactDimensions" 
-            component={ReactDimensions} />
+        <Stack.Screen name="ReactUIScale" 
+            component={ReactUIScale} />
     
     </Stack.Navigator>
     )
