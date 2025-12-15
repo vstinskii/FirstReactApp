@@ -22,6 +22,9 @@ const Menu = () => {
           <Button title="React Flex"
           onPress={() => navigation.navigate("ReactFlex")}
           />
+          <Button title="React Flex Wrap"
+          onPress={() => navigation.navigate("ReactFlexWrap")}
+          />
 
         </ScrollView>
       </SafeAreaView>
