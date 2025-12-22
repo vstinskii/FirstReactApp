@@ -23,6 +23,9 @@ const Menu = () => {
           <Button title="React UI Scale"
           onPress={() => navigation.navigate("ReactUIScale")}
           />
+          <Button title="React Hooks"
+          onPress={() => navigation.navigate("ReactHooks")}
+          />
 
         </ScrollView>
       </SafeAreaView>

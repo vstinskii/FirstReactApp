@@ -4,6 +4,7 @@ import Menu from "../screens/Menu";
 import ReactFlex from "../screens/ReactFlex";
 import ReactFlexWrap from "../screens/ReactFlexWrap";
 import ReactUIScale from "../screens/ReactUIScale";
+import ReactHooks from "../screens/ReactHooks";
 
 const Stack = createStackNavigator()
 
@@ -20,6 +21,8 @@ function MainStackNavigator() {
             component={ReactFlexWrap} />
         <Stack.Screen name="ReactUIScale" 
             component={ReactUIScale} />
+        <Stack.Screen name="ReactHooks" 
+            component={ReactHooks} />
     
     </Stack.Navigator>
     )
