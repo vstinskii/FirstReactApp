@@ -26,6 +26,9 @@ const Menu = () => {
           <Button title="React Hooks"
           onPress={() => navigation.navigate("ReactHooks")}
           />
+          <Button title="React Modal"
+          onPress={() => navigation.navigate("ReactModal")}
+          />
 
         </ScrollView>
       </SafeAreaView>

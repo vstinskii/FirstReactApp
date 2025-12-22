@@ -5,6 +5,7 @@ import ReactFlex from "../screens/ReactFlex";
 import ReactFlexWrap from "../screens/ReactFlexWrap";
 import ReactUIScale from "../screens/ReactUIScale";
 import ReactHooks from "../screens/ReactHooks";
+import ReactModal from "../screens/ReactModal";
 
 const Stack = createStackNavigator()
 
@@ -23,6 +24,8 @@ function MainStackNavigator() {
             component={ReactUIScale} />
         <Stack.Screen name="ReactHooks" 
             component={ReactHooks} />
+        <Stack.Screen name="ReactModal" 
+            component={ReactModal} />
     
     </Stack.Navigator>
     )
