@@ -6,6 +6,7 @@ import ReactFlexWrap from "../screens/ReactFlexWrap";
 import ReactUIScale from "../screens/ReactUIScale";
 import ReactHooks from "../screens/ReactHooks";
 import ReactModal from "../screens/ReactModal";
+import ReactImageBackground from "../screens/ReactImageBackground";
 
 const Stack = createStackNavigator()
 
@@ -26,7 +27,9 @@ function MainStackNavigator() {
             component={ReactHooks} />
         <Stack.Screen name="ReactModal" 
             component={ReactModal} />
-    
+        <Stack.Screen name="ReactImageBackground" 
+            component={ReactImageBackground} />
+
     </Stack.Navigator>
     )
 }
