@@ -1,5 +1,8 @@
-import { StyleSheet, Text, Button, View, Modal } from 'react-native'
-import React, { useState } from 'react'
+import { StyleSheet, Text, Button, View, Modal } from 'react-native';
+
+// import AntDesign from '@expo/vector-icons/AntDesign';
+import { AntDesign } from '@expo/vector-icons';
+import React, { useState } from 'react';
 
 
 const ReactModal = () => {
@@ -22,6 +25,7 @@ const ReactModal = () => {
             
             onPress={hideModal}
         />
+            <AntDesign name="close-circle" size={50} color="black" onPress={hideModal}/>
         </Modal>
         </View>
     )
